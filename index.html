@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+
+<body>
+    
+</body>
+
+
+
+    <div class="container">
+       
+
+        
+        <div class="container">
+            <h1 style=" margin-top:80px;" >Ajude  o  Cerejinha a montar o projeto do TCC</h1>
+            <p >Clique nos componentes abaixo e monte o Projeto do TCC</p>
+            <br>Objetivo: Fazer a lâmpada que esta apagada Acender.
+        
+            <!-- Adicione a imagem inicial aqui -->
+            <div id="status-image">
+                <img src="imagens/cerejinhaduvida.png" alt="Projeto Incompleto" style="width: 140px;" id="project-status-img">
+            </div>
+        
+            <div id="balloons" style="display: none;">
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+            </div>
+            <!-- Restante do seu código -->
+        
+        
+        <div class="component-box">
+            <h2>Componentes</h2>
+            <div class="component" id="battery">
+                <div class="title">Bateria</div>
+                <img src="imagens/bateria.png" alt="Bateria">
+            </div>
+            <div class="component" id="transformer">
+                <div class="title">Transformador</div>
+                <img src="imagens/trafo.png" alt="Transformador">
+            </div>
+            <div class="component" id="capacitor">
+                <div class="title">Capacitor</div>
+                <img src="imagens/capacitor.png" alt="Capacitor">
+            </div>
+            <div class="component" id="motor">
+                <div class="title">Motor</div>
+                <img src="imagens/motorele.png" alt="Motor Elétrico">
+            </div>
+            <div class="component" id="axis">
+                <div class="title">Eixo<br>com imãs</div>
+                <img src="imagens/eixo.png" alt="Eixo">
+            </div>
+            <div class="component" id="stator">
+                <div class="title">Estator</div>
+                <img src="imagens/estator.png" alt="Estator">
+            </div>
+            <div class="component" id="transistor">
+                <div class="title">Transistor</div>
+              
+              <p>  <img src="imagens/transisto.png" alt="Transistor">
+              </p>
+            </div>
+        </div>
+
+        <!-- Adicione isso na parte do corpo do seu HTML -->
+<button id="reset-button" style="margin-top: 20px; padding: 10px; font-size: 16px;">Reiniciar Montagem</button>
+
+        <div class="workspace" id="workspace">
+            
+            <div id="battery-slot" class="slot">Bateria</div>
+            <div id="transformer-slot" class="slot">Transformador</div>
+            <div id="capacitor-slot" class="slot">Capacitor</div>
+            <div id="motor-slot" class="slot">Motor Elétrico</div>
+            <div id="axis-slot" class="slot">Eixo</div>
+            <div id="stator-slot" class="slot">Estator</div>
+            <div id="transistor-slot" class="slot">Transistor</div>
+            
+
+           
+       
+            <div id="lamp" style="display: none; margin-top: 20px;">
+                <P>PARABÉNS!</P>
+                <img src="imagens/lampada-acesa.png" alt="Lampada Acesa" style="width: 100px;"> <!-- Substitua pelo caminho correto da sua imagem da lâmpada -->
+            </div>
+           
+            <div id="lamp-off" style="display: none; margin-top: 20px;">
+                
+                <img src="imagens/lampada-apagada.png" alt="Lâmpada Apagada" style="width: 100px;"> <!-- Lâmpada apagada -->
+               
+            </div>
+    </div>
+        
+        <div class="instructions">©️ Hódrigo Dionathan 2024</div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
