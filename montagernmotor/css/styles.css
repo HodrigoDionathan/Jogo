@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
+    background: linear-gradient(135deg, #00aaff, #0077cc);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+}
+
+.component-box, .workspace {
+    width: 100%; /* Tamanho fixo */
+    height: 300px; /* Altura fixa */
+    
+    margin: 10px auto;
+    
+    background-color: rgba(255, 255, 255, 0.1);
+    position: relative; /* Necessário para o posicionamento absoluto dos componentes */
+}
+
+.workspace {
+    border-dash: 2px dashed #fff; /* A borda da área de montagem será pontilhada */
+}
+
+.component {
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    
+    border-radius: 50px;
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    display: inline-block;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+
+}
+
+.title {
+    color: #fff; /* Cor do título */
+    font-weight: bold; /* Negrito para destaque */
+    margin-bottom: 5px; /* Espaçamento entre o título e a imagem */
+}
+
+.component img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do componente */
+    border-radius: 50px;
+}
+
+.slot {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: relative;
+    display: inline-block;
+}
+
+.instructions {
+    margin-top: 80px;
+}
+
+/* Estilos para as linhas simulando fios elétricos */
+.line {
+    position: absolute;
+    background-color: yellow; /* Cor dos fios */
+    height: 2px; /* Espessura do fio */
+    transition: background-color 0.3s; /* Efeito de transição */
+}
+
+.line:hover {
+    background-color: orange; /* Muda a cor quando passa o mouse */
+}
+
+/* Posicionamento das linhas entre os slots */
+#line1 {
+    width: calc(20% - 100px);
+    top: 100px; /* Posição vertical entre a bateria e o transformador */
+    left: 150px; /* Posição horizontal alinhada com os slots */
+}
+
+#line2 {
+    width: calc(20% - 100px);
+    top: 100px; /* Posição vertical entre o transformador e o capacitor */
+    left: 280px; /* Posição horizontal alinhada com os slots */
+}
+
+#line3 {
+    width: calc(100% - 120px);
+    top: 155px; /* Posição vertical entre o capacitor e o motor */
+    left: 140px; /* Posição horizontal alinhada com os slots */
+}
+
+#line4 {
+    width: calc(100% - 120px);
+    top: 205px; /* Posição vertical entre o motor e o eixo */
+    left: 140px; /* Posição horizontal alinhada com os slots */
+}
+
+#line5 {
+    width: calc(100% - 120px);
+    top: 255px; /* Posição vertical entre o eixo e o estator */
+    left: 140px; /* Posição horizontal alinhada com os slots */
+}
+
+#line6 {
+    width: calc(100% - 120px);
+    top: 305px; /* Posição vertical entre o estator e o transistor */
+    left: 140px; /* Posição horizontal alinhada com os slots */
+}
+
+
+.header {
+    position: absolute; /* Posiciona de forma absoluta em relação ao container */
+    top: 20px; /* Distância do topo da página */
+    left: 20px; /* Distância da esquerda da página */
+    color: #fff; /* Cor do texto */
+    z-index: 10; /* Certifica-se de que o título está acima de outros elementos */
+}
+
+.header h1 {
+    font-size: 24px; /* Tamanho da fonte do título */
+    margin: 0; /* Remove margens padrão */
+}
+
+.header p {
+    font-size: 16px; /* Tamanho da fonte da descrição */
+    margin: 5px 0 0 0; /* Espaçamento acima da descrição */
+}
+
+#status-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#status-image img {
+    margin-top: 25px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+#status-image img.zoom {
+    animation: zoom-in 2s ease-in-out;
+    transform: scale(1.2); /* Aumenta a imagem */
+}
+
+@keyframes zoom-in {
+    0% {
+        transform: scale(1); /* Tamanho inicial */
+    }
+    100% {
+        transform: scale(1.2); /* Tamanho final */
+    }
+}
+
+/* Estilo e animação para os balões */
+#balloons {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.balloon {
+    width: 50px;
+    height: 70px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    animation: float 5s ease-in-out infinite;
+}
+
+.balloon:before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background-color: black;
+}
+
+.balloon:nth-child(2) {
+    background-color: blue;
+    animation-delay: 1s;
+}
+
+.balloon:nth-child(3) {
+    background-color: green;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
