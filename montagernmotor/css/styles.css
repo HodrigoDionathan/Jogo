@@ -12,11 +12,12 @@ body {
 
 .container {
     text-align: center;
+    padding: 20px;
 }
 
 .component-box, .workspace {
     width: 100%; /* Tamanho fixo */
-    height: 300px; /* Altura fixa */
+    height: auto; /* Altura fixa */
     
     margin: 10px auto;
     
@@ -210,5 +211,52 @@ body {
     }
     100% {
         transform: translateY(0);
+    }
+}
+/* Estilos para smartphones */
+@media (max-width: 768px) {
+    .component {
+        width: 80px;
+    }
+
+    .slot {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p, .title {
+        font-size: 14px;
+    }
+
+    #status-image img {
+        width: 100px;
+    }
+}
+
+/* Estilos para telas muito pequenas */
+@media (max-width: 480px) {
+    .component {
+        width: 60px;
+    }
+
+    .slot {
+        width: 60px;
+        height: 60px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    p, .title {
+        font-size: 12px;
+    }
+
+    #status-image img {
+        width: 80px;
     }
 }
